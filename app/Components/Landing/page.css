@@ -1,8 +1,10 @@
-body{
+body {
   background-color: #1e1e1e;
+  margin: 0; /* Reset default margin */
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,13 +17,13 @@ body{
   align-items: center;
   justify-content: center;
   height: 15vh;
-  margin-top: 20px; /* Adjust top margin as needed */
 }
 
 .authButtons {
+  position: absolute;
+  top: 5%;
+  right: 5%;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 20px; /* Adjust top margin as needed */
 }
 
 .logo,
@@ -34,7 +36,6 @@ body{
   margin-left: -10px;
 }
 
-/* Define styles for buttons and links */
 .signinLink,
 .signupLink {
   text-decoration: none;
@@ -43,8 +44,8 @@ body{
 .signinBtn,
 .signupBtn {
   padding: 8px 16px;
-  margin-left: 10px; /* Adjust spacing between buttons */
-  background-color: #0070f3; /* Example background color */
+  margin-left: 10px;
+  background-color: #0070f3;
   color: white;
   border: none;
   border-radius: 4px;
@@ -53,11 +54,121 @@ body{
 
 .signinBtn:hover,
 .signupBtn:hover {
-  background-color: #0056b3; /* Example hover background color */
+  background-color: #0056b3;
 }
 
-.authButtons {
+.logo-navbar {
   position: absolute;
-  top: 5%; /* Adjust percentage as needed */
-  right: 5%; /* Adjust percentage as needed */
+  top: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-navbar h2 {
+  margin: 0;
+  padding: 10px;
+  margin-left: 30px;
+  color: white;
+}
+
+.main-container::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(169, 47, 47);
+  margin-top: 20px;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger-content {
+  position: absolute;
+  top: calc(100% + 10px); /* Adjust distance from the burger icon */
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.burger-content a {
+  margin-bottom: 10px;
+}
+
+.burger-content.show {
+  display: flex;
+}
+
+.burger-icon.open .burger-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.burger-icon.open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.open .burger-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .logo-navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-navbar h2 {
+    display: block;
+    margin-top: 80px;
+    margin-left: 7px;
+    margin-right: 18px;
+    align-self: center;
+    align-items: center;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-content.show {
+    display: flex;
+  }
+
+  .burger-icon.open .burger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .burger-icon.open .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-icon.open .burger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
 }
