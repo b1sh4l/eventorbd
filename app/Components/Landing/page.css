@@ -1,13 +1,27 @@
-body {
+body{
   background-color: #1e1e1e;
 }
 
-.main-container {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.mainLogo {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 15vh;
+  margin-top: 20px; /* Adjust top margin as needed */
+}
 
+.authButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px; /* Adjust top margin as needed */
 }
 
 .logo,
@@ -18,4 +32,32 @@ body {
 
 .logo-text {
   margin-left: -10px;
+}
+
+/* Define styles for buttons and links */
+.signinLink,
+.signupLink {
+  text-decoration: none;
+}
+
+.signinBtn,
+.signupBtn {
+  padding: 8px 16px;
+  margin-left: 10px; /* Adjust spacing between buttons */
+  background-color: #0070f3; /* Example background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signinBtn:hover,
+.signupBtn:hover {
+  background-color: #0056b3; /* Example hover background color */
+}
+
+.authButtons {
+  position: absolute;
+  top: 5%; /* Adjust percentage as needed */
+  right: 5%; /* Adjust percentage as needed */
 }
