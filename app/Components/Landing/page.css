@@ -1,9 +1,17 @@
 .main-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    margin-right: 16px;
-    padding: 12px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+
+}
+
+.logo,
+.logo-text {
+  padding: 12px;
+  position: relative;
+}
+
+.logo-text {
+  margin-left: -10px;
+}

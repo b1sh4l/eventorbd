@@ -10,16 +10,16 @@ const LandingPage = () => {
       className="logo"
         src={eventorbdLogo}
         alt="eventordbdLogo"
-        width={70}
-        height={70}
+        width={50}
+        height={50}
         layout="intrinsic"
       />
         <Image
         className="logo-text"
         src={eventorbdText}
         alt="eventorbdText"
-        width={200}
-        height={70}
+        width={140}
+        height={49}
         layout="intrinsic"
         />
       
