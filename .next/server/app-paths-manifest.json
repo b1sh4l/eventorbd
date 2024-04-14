@@ -1,5 +1,7 @@
 {
-  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/Components/Hello/page": "app/Components/Hello/page.js"
+  "/(auth)/sign-in/[[...sign-in]]/page": "app/(auth)/sign-in/[[...sign-in]]/page.js",
+  "/(auth)/user-profile/[[...user-profile]]/page": "app/(auth)/user-profile/[[...user-profile]]/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
+  "/api/trpc/[trpc]/route": "app/api/trpc/[trpc]/route.js"
 }

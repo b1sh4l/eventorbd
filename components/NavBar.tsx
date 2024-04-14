@@ -78,6 +78,15 @@ export function NavBar() {
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <Link href="/#services" legacyBehavior passHref className="cursor-pointer">
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                Services
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+
                     <NavigationMenuItem>
                         <Link href="/contact-us" legacyBehavior passHref className="cursor-pointer">
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
